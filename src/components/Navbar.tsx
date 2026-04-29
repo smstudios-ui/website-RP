@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
-import gsap from 'gsap';
+import { NavLink } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,15 +23,6 @@ const Navbar: React.FC = () => {
     { path: '/bans', label: 'Bans' },
     { path: '/staff', label: 'Staff' }
   ];
-
-  const handleScrollToSection = (id: string) => {
-    if (location.pathname === '/') {
-      const el = document.getElementById(id);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  };
 
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>

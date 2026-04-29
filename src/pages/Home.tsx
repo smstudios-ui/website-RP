@@ -78,39 +78,6 @@ const Home: React.FC<HomeProps> = ({ isLoaded }) => {
       });
     });
 
-    // 3. Optimized Journey Scrollytelling
-    const steps = gsap.utils.toArray('.journey-step');
-    const visuals = gsap.utils.toArray('.visual-item');
-
-    gsap.to('.journey-progress-fill', {
-      height: '100%',
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '.journey-container',
-        start: 'top center',
-        end: 'bottom center',
-        scrub: 0.5 // Added slight smoothing to scrub
-      }
-    });
-
-    steps.forEach((step: any, i: number) => {
-      ScrollTrigger.create({
-        trigger: step,
-        start: 'top 60%',
-        end: 'bottom 40%',
-        onToggle: self => {
-          if (self.isActive) {
-            step.classList.add('active');
-            visuals.forEach((v, idx) => {
-              (v as HTMLElement).classList.toggle('active', idx === i);
-            });
-          } else {
-            step.classList.remove('active');
-          }
-        }
-      });
-    });
-
     return () => {
       ScrollTrigger.getAll().forEach(t => t.kill());
     };
