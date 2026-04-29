@@ -81,7 +81,7 @@ const Preloader: React.FC<PreloaderProps> = ({ onReveal, onComplete }) => {
       <div className="preloader-inner">
         <div className="loader-glow"></div>
         <h1 className="loader-title">
-          INFERNO <span className="text-red">RP</span>
+          APEXON <span className="text-red">RP</span>
         </h1>
       </div>
     </div>

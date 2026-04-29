@@ -118,7 +118,7 @@ const Home: React.FC<HomeProps> = ({ isLoaded }) => {
           <div className="about-text">
             <h2 className="hero-subtitle reveal-text">Our Story</h2>
             <h1 className="section-title reveal-text">A New Era of <br /><span className="text-red">Roleplay</span></h1>
-            <p className="hero-desc reveal-text">Inferno RP is built from the ground up for serious roleplayers. We focus on deep immersion, player-driven economy, and high-quality custom assets.</p>
+            <p className="hero-desc reveal-text">Apexon RP is built from the ground up for serious roleplayers. We focus on deep immersion, player-driven economy, and high-quality custom assets.</p>
             <div className="about-stats reveal-text">
               <div className="stat-box">
                 <span className="stat-num">500+</span>
@@ -197,7 +197,7 @@ const Home: React.FC<HomeProps> = ({ isLoaded }) => {
                 <span className="terminal-title">server_rules.exe</span>
               </div>
               <div className="terminal-body">
-                <p><span className="text-red">root@inferno:~$</span> ./load_rules</p>
+                <p><span className="text-red">root@apexon:~$</span> ./load_rules</p>
                 <p className="terminal-output">Loading core directives...</p>
                 <p className="terminal-output">[OK] Rule 1: Value of Life active.</p>
                 <p className="terminal-output">[OK] Rule 2: RDM/VDM prevention enabled.</p>
