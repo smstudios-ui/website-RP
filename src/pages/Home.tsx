@@ -24,12 +24,10 @@ const Home: React.FC<HomeProps> = ({ isLoaded }) => {
     // Setup initial hidden states
     gsap.set('.hero-bg', { scale: 1.05 });
     gsap.set('.hero-overlay', { opacity: 1, background: '#000' });
-    gsap.set(['.hero-title', '.hero-subtitle', '.hero-desc', '.hero-buttons .btn'], { 
-      opacity: 0, 
-      y: 40 
+    gsap.set(['.hero-title', '.hero-subtitle', '.hero-desc', '.hero-buttons .btn'], {
+      opacity: 0,
+      y: 40
     });
-    gsap.set('.navbar', { opacity: 0, y: 30 });
-
     heroTl
       .to('.hero-overlay', {
         opacity: 0.6,
@@ -60,12 +58,7 @@ const Home: React.FC<HomeProps> = ({ isLoaded }) => {
         opacity: 1,
         duration: 1,
         stagger: 0.15,
-      }, 1.1)
-      .to('.navbar', {
-        y: 0,
-        opacity: 1,
-        duration: 1.2,
-      }, 1.3);
+      }, 1.1);
 
     // 2. Efficient Global Text Reveal
     const reveals = gsap.utils.toArray('.reveal-text');
@@ -80,7 +73,7 @@ const Home: React.FC<HomeProps> = ({ isLoaded }) => {
           start: 'top 90%',
           toggleActions: 'play none none none',
           // Performance optimization: prevent calculation on every scroll event
-          fastScrollEnd: true, 
+          fastScrollEnd: true,
         }
       });
     });
@@ -128,12 +121,12 @@ const Home: React.FC<HomeProps> = ({ isLoaded }) => {
       <section className="hero" id="home" ref={heroRef}>
         <div className="hero-flare"></div>
         <div className="hero-bg" ref={heroBgRef}>
-          <video 
-            src="/The Prime - GTA V Cinematic (NoPixel) - neutreN (1080p).mp4" 
-            autoPlay 
-            muted 
-            loop 
-            playsInline 
+          <video
+            src="/The Prime - GTA V Cinematic (NoPixel) - neutreN (1080p).mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
             className="hero-video"
           />
           <div className="hero-overlay"></div>
@@ -157,7 +150,7 @@ const Home: React.FC<HomeProps> = ({ isLoaded }) => {
         <div className="container about-grid">
           <div className="about-text">
             <h2 className="hero-subtitle reveal-text">Our Story</h2>
-            <h1 className="section-title reveal-text">A New Era of <br/><span className="text-red">Roleplay</span></h1>
+            <h1 className="section-title reveal-text">A New Era of <br /><span className="text-red">Roleplay</span></h1>
             <p className="hero-desc reveal-text">Inferno RP is built from the ground up for serious roleplayers. We focus on deep immersion, player-driven economy, and high-quality custom assets.</p>
             <div className="about-stats reveal-text">
               <div className="stat-box">
@@ -184,7 +177,7 @@ const Home: React.FC<HomeProps> = ({ isLoaded }) => {
             <h2 className="hero-subtitle reveal-text">What We Offer</h2>
             <h1 className="section-title reveal-text">Premium <span className="text-red">Features</span></h1>
           </div>
-          
+
           <div className="divine-grid">
             <div className="divine-card glass-panel reveal-text">
               <span className="card-index">01</span>
